@@ -4,7 +4,7 @@
 int main(void) {
 	setbuf(stdout, NULL);
 
-
+	printf("Prueba GIT");
 
 	return EXIT_SUCCESS;
 }
