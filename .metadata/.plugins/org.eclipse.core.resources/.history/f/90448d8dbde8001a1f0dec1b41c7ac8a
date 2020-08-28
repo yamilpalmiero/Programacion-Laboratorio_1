@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	char nombre[6]= "Yamil"; //el 6to caracter seria para el \0 que marca el final
+
+	printf("El valor de nombre es: %s", nombre);
+
+	return 0;
+}

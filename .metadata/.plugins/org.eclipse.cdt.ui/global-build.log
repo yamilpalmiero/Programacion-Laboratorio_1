@@ -1,0 +1,5 @@
+22:16:55 **** Incremental Build of configuration Debug for project Clase02_ej5 ****
+Info: Internal Builder is used for build
+gcc -o Clase02_ej5.exe "src\\Clase02_ej5.o" 
+Info: Nothing to build for Clase02_ej5
+Info: Nothing to build for Clase02_ej5

@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	char letra1;
+	char letra2;
+	char nombre[6] = "Yamil"; //el 6to caracter seria para el \0 que marca el final
+
+	printf("Ingrese una letra: ");
+	scanf("%c", &letra1);
+	printf("Ingrese otra letra: ");
+	scanf("%c", &letra2);
+
+	printf("El valor de nombre es: %s", nombre);
+	printf("\nLa primera letra es: ", letra1);
+	printf("\nLa segunda letra es: ", letra2);
+
+	systrem("PAUSE");
+
+	return 0;
+}
