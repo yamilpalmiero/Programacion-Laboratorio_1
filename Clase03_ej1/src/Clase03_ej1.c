@@ -30,7 +30,8 @@ int main(void) {
 			if (flag == 0) {
 				printf("Debe saludar antes de brindar.\n");
 				system("pause");
-			} else {
+			}
+			else {
 				printf("Chin Chin!\n");
 				flag2 = 1;
 			}
@@ -40,8 +41,10 @@ int main(void) {
 			if (flag == 0) {
 				printf("Debe saludar antes de irse.\n");
 				system("pause");
-			} else {
+			}
+			else {
 				printf("Chau!\n");
+				flag = 0;
 			}
 			break;
 
@@ -49,7 +52,9 @@ int main(void) {
 			if (flag2 == 0) {
 				printf("Debe brindar antes de despedirse.\n");
 				system("pause");
-			} else {
+			}
+			else {
+				flag2 = 0;
 				printf("Esta seguro que desea salir? s/n: ");
 				fflush(stdin);
 				scanf("%c", &respuesta);
@@ -57,5 +62,8 @@ int main(void) {
 		}
 
 	} while (opcion != 's');
+
+	system("pause");
+
 	return EXIT_SUCCESS;
 }
