@@ -1,5 +1,5 @@
-21:53:40 **** Incremental Build of configuration Debug for project Clase02_ej6 ****
+20:26:34 **** Incremental Build of configuration Debug for project Clase03_ej2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase02_ej6.o" "..\\src\\Clase02_ej6.c" 
-gcc -o Clase02_ej6.exe "src\\Clase02_ej6.o" 
-Info: Nothing to build for Clase02_ej6
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase03_ej2.o" "..\\src\\Clase03_ej2.c" 
+gcc -o Clase03_ej2.exe "src\\Clase03_ej2.o" 
+Info: Nothing to build for Clase03_ej2
