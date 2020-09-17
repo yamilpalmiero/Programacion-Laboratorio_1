@@ -8,7 +8,7 @@ int main(void) {
 	int edad;
 	int respuesta;
 
-	respuesta = utn_getNumero(&edad, "Ingrese la edad: ", "Error, debe ser entre 0 y 150.\n\n", 0, 150, 3);
+	respuesta = utn_getEntero(&edad, "Ingrese la edad: ", "Error, debe ser entre 0 y 150.\n\n", 0, 150, 3);
 	if (respuesta == -1) {
 		printf("Ya no tiene reintentos.");
 	} else {
