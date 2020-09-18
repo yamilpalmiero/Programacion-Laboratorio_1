@@ -1,12 +1,5 @@
-21:40:44 **** Incremental Build of configuration Debug for project Clase07_ej2 ****
+21:05:08 **** Incremental Build of configuration Debug for project Clase08_ej1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase07_ej2.o" "..\\src\\Clase07_ej2.c" 
-..\src\Clase07_ej2.c: In function 'main':
-..\src\Clase07_ej2.c:46:53: warning: multi-character character constant [-Wmultichar]
-   46 |     || !(sexo[posicion] == 'F' || sexo[posicion] == 'M)')) {
-      |                                                     ^~~~
-gcc -o Clase07_ej2.exe "src\\Clase07_ej2.o" 
-21:50:53 **** Incremental Build of configuration Debug for project Clase07_ej2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase07_ej2.o" "..\\src\\Clase07_ej2.c" 
-gcc -o Clase07_ej2.exe "src\\Clase07_ej2.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase08_ej1.o" "..\\src\\Clase08_ej1.c" 
+gcc -o Clase08_ej1.exe "src\\Clase08_ej1.o" 
+Info: Nothing to build for Clase08_ej1
