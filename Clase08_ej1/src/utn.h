@@ -60,7 +60,7 @@ void utn_imprimirArrayEnteros(int array[], int cantidad);
  * param Array de enteros
  * param Cantidad de elementos
  */
-void utn_imprimirArrayFlotantes(int array[], int cantidad);
+void utn_imprimirArrayFlotantes(float array[], int cantidad);
 
 /*
  * brief Recibe un array de flotantes y devuelve el promedio por puntero
@@ -76,4 +76,4 @@ void utn_calcularPromedio(float arrayFloat[], int cantidad, float *pResultado);
  * param Array de flotantes
  * param Cantidad de elementos de los array paralelos
  */
-
+void utn_cargarArrays(int arrayInt, float arrayFloat, int cantidad);

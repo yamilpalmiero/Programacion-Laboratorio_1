@@ -38,7 +38,7 @@ int main(void) {
 		printf("\nSueldo: %d\n", sueldos[i]);
 	}
 
-	printf("\nEl sueldo promedio es %.2f\n", promedio);
+	printf("\nEl sueldo promedio es %.3f\n", promedio);
 
 	printf("\n");
 	system("pause");

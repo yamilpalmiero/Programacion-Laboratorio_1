@@ -110,4 +110,3 @@ void utn_calcularPromedio(float arrayFloat[], int cantidad, float *pResultado) {
 	*pResultado = suma / contador;
 }
 //------------------------------------------------------------------------------------------------------------------------
-
