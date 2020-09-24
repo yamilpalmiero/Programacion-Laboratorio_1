@@ -409,3 +409,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.cdt.core 1 0 2020-09-23 19:58:24.008
 !MESSAGE Indexed 'Clase09_ej2' (1 sources, 0 headers) in 0,003 sec: 2 declarations; 1 references; 2 unresolved inclusions; 0 syntax errors; 1 unresolved names (25 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-09-23 20:32:24.684
+!MESSAGE Indexed 'Clase09_ej3' (1 sources, 0 headers) in 0,002 sec: 2 declarations; 1 references; 2 unresolved inclusions; 0 syntax errors; 1 unresolved names (25 %)
