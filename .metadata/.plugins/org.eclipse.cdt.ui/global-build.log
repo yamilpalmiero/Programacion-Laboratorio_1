@@ -1,115 +1,21 @@
-22:20:55 **** Incremental Build of configuration Debug for project Clase09_ej3 ****
+20:26:07 **** Incremental Build of configuration Debug for project Clase10_ej1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase09_ej3.o" "..\\src\\Clase09_ej3.c" 
-..\src\Clase09_ej3.c: In function 'main':
-..\src\Clase09_ej3.c:48:1: error: stray '\342' in program
-   48 | ​
-      | ^
-..\src\Clase09_ej3.c:48:2: error: stray '\200' in program
-   48 | ​
-      |  ^
-..\src\Clase09_ej3.c:48:3: error: stray '\213' in program
-   48 | ​
-      |   ^
-..\src\Clase09_ej3.c:49:1: error: stray '\342' in program
-   49 | ​
-      | ^
-..\src\Clase09_ej3.c:49:2: error: stray '\200' in program
-   49 | ​
-      |  ^
-..\src\Clase09_ej3.c:49:3: error: stray '\213' in program
-   49 | ​
-      |   ^
-..\src\Clase09_ej3.c:50:1: error: stray '\342' in program
-   50 | ​
-      | ^
-..\src\Clase09_ej3.c:50:2: error: stray '\200' in program
-   50 | ​
-      |  ^
-..\src\Clase09_ej3.c:50:3: error: stray '\213' in program
-   50 | ​
-      |   ^
-..\src\Clase09_ej3.c:68:1: error: stray '\342' in program
-   68 | ​
-      | ^
-..\src\Clase09_ej3.c:68:2: error: stray '\200' in program
-   68 | ​
-      |  ^
-..\src\Clase09_ej3.c:68:3: error: stray '\213' in program
-   68 | ​
-      |   ^
-..\src\Clase09_ej3.c:80:5: error: stray '\342' in program
-   80 |   */​
-      |     ^
-..\src\Clase09_ej3.c:80:6: error: stray '\200' in program
-   80 |   */​
-      |      ^
-..\src\Clase09_ej3.c:80:7: error: stray '\213' in program
-   80 |   */​
-      |       ^
-..\src\Clase09_ej3.c:100:1: error: stray '\342' in program
-  100 | ​
-      | ^
-..\src\Clase09_ej3.c:100:2: error: stray '\200' in program
-  100 | ​
-      |  ^
-..\src\Clase09_ej3.c:100:3: error: stray '\213' in program
-  100 | ​
-      |   ^
-..\src\Clase09_ej3.c:101:1: error: stray '\342' in program
-  101 | ​
-      | ^
-..\src\Clase09_ej3.c:101:2: error: stray '\200' in program
-  101 | ​
-      |  ^
-..\src\Clase09_ej3.c:101:3: error: stray '\213' in program
-  101 | ​
-      |   ^
-..\src\Clase09_ej3.c:120:3: warning: "/*" within comment [-Wcomment]
-  120 |   /*
-      |    
-..\src\Clase09_ej3.c:171:1: error: stray '\342' in program
-  171 | ​
-      | ^
-..\src\Clase09_ej3.c:171:2: error: stray '\200' in program
-  171 | ​
-      |  ^
-..\src\Clase09_ej3.c:171:3: error: stray '\213' in program
-  171 | ​
-      |   ^
-..\src\Clase09_ej3.c:172:1: error: stray '\342' in program
-  172 | ​
-      | ^
-..\src\Clase09_ej3.c:172:2: error: stray '\200' in program
-  172 | ​
-      |  ^
-..\src\Clase09_ej3.c:172:3: error: stray '\213' in program
-  172 | ​
-      |   ^
-..\src\Clase09_ej3.c:190:1: error: stray '\342' in program
-  190 | ​
-      | ^
-..\src\Clase09_ej3.c:190:2: error: stray '\200' in program
-  190 | ​
-      |  ^
-..\src\Clase09_ej3.c:190:3: error: stray '\213' in program
-  190 | ​
-      |   ^
-..\src\Clase09_ej3.c:206:1: error: stray '\342' in program
-  206 | ​
-      | ^
-..\src\Clase09_ej3.c:206:2: error: stray '\200' in program
-  206 | ​
-      |  ^
-..\src\Clase09_ej3.c:206:3: error: stray '\213' in program
-  206 | ​
-      |   ^
-..\src\Clase09_ej3.c:304:5: error: stray '\342' in program
-  304 |   */​
-      |     ^
-..\src\Clase09_ej3.c:304:6: error: stray '\200' in program
-  304 |   */​
-      |      ^
-..\src\Clase09_ej3.c:304:7: error: stray '\213' in program
-  304 |   */​
-      |       ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10_ej1.o" "..\\src\\Clase10_ej1.c" 
+..\src\Clase10_ej1.c: In function 'main':
+..\src\Clase10_ej1.c:20:34: warning: passing argument 1 of 'imprimirArrayCadena' from incompatible pointer type [-Wincompatible-pointer-types]
+   20 |  imprimirArrayCadena(arrayNombres[i], CANT_CLIENTES);
+      |                      ~~~~~~~~~~~~^~~
+      |                                  |
+      |                                  char *
+..\src\Clase10_ej1.c:6:31: note: expected 'char (*)[21]' but argument is of type 'char *'
+    6 | void imprimirArrayCadena(char pArray[][21], int limite);
+      |                          ~~~~~^~~~~~~~~~~~
+..\src\Clase10_ej1.c:25:36: warning: passing argument 1 of 'imprimirArrayCadena' from incompatible pointer type [-Wincompatible-pointer-types]
+   25 |  imprimirArrayCadena(arrayApellidos[i], CANT_CLIENTES);
+      |                      ~~~~~~~~~~~~~~^~~
+      |                                    |
+      |                                    char *
+..\src\Clase10_ej1.c:6:31: note: expected 'char (*)[21]' but argument is of type 'char *'
+    6 | void imprimirArrayCadena(char pArray[][21], int limite);
+      |                          ~~~~~^~~~~~~~~~~~
+gcc -o Clase10_ej1.exe "src\\Clase10_ej1.o" 
