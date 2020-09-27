@@ -1,5 +1,2 @@
-21:55:32 **** Rebuild of configuration Debug for project Clase10_ej2 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase10_ej2.o" "..\\src\\Clase10_ej2.c" 
-gcc -o Clase10_ej2.exe "src\\Clase10_ej2.o" 
-Info: Nothing to build for Clase10_ej2
+Info: Nothing to build for Clase10_ej3
+Info: Nothing to build for Clase10_ej3
