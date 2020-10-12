@@ -43,9 +43,29 @@ int validarIdCarrera(eCarrera *array, int len, int idCarrera);
  * brief Recibe el id de una carrera y devuelve su descripcion
  * param idCarrera Id de la carrera
  * param array Array de estructuras de carreras
- * param len Tamaño del array
+ * param len Tamaño del array de carreras
  * param *descripcion Puntero a la posicion de memoria donde se guardara la descripcion de la carrera
  * return Retorna 0 si salio ok y -1 si no
  */
 int cargarDescripcionCarrera(int idCarrera, eCarrera *array, int len,
 		char *descripcion);
+
+/*
+ * brief Recibe la descripcion de una carrera y devuelve su id
+ * param descripcion Descripcion de la carrera
+ * param array Array de estructuras de carreras
+ * param len Tamaño del array de carreras
+ * param *idCarrera Puntero a la posicion de memoria donde se guardara el id de la carrera
+ * return Retorna 0 si salio ok y -1 si no
+ */
+int cargarIdCarrera(char *descripcion, eCarrera *array, int len, int *idCarrera);
+
+/*
+ * brief Recorre el array de carreras y me devuelve la carrera que coincida con el id pasado por parametro
+ * param array Array de carreras
+ * param len Tamaño del array de carreras
+ * param idCarrera Dato id de la carrera buscada
+ * return Retorna la estructura con los datos de la carrera buscada
+ */
+eCarrera buscarCarreraPorId(eCarrera *array, int len, int idCarrera);
+

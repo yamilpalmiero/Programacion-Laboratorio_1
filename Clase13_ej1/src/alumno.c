@@ -79,8 +79,8 @@ void sortAlumnos(eAlumno *arrayAlumno, int lenAlu, int orden, int criterio) {
 	eAlumno auxiliarAlumno;
 	int i, j;
 
-	if (arrayAlumno != NULL && lenAlu > 0 && (orden = 1 || orden = -1)
-			&& (criterio = 1 || criterio = -1)) {
+	if (arrayAlumno != NULL && lenAlu > 0 && (orden == 1 || orden == -1)
+			&& (criterio == 1 || criterio == -1)) {
 		for (i = 0; i < lenAlu - 1; i++) {
 			for (j = i + 1; j < lenAlu; j++) {
 				if (arrayAlumno[i].isEmpty == 0
@@ -95,7 +95,7 @@ void sortAlumnos(eAlumno *arrayAlumno, int lenAlu, int orden, int criterio) {
 						} else {
 							if (orden == -1
 									&& arrayAlumno[i].promedio
-											< arrayAlumno[j]) {
+											< arrayAlumno[j].promedio) {
 								auxiliarAlumno = arrayAlumno[i];
 								arrayAlumno[i] = arrayAlumno[j];
 								arrayAlumno[j] = auxiliarAlumno;
@@ -116,3 +116,4 @@ void sortAlumnos(eAlumno *arrayAlumno, int lenAlu, int orden, int criterio) {
 	}
 	printf("\nAlumnos ordenados.");
 }
+//---------------------------------------------------------------------------------------------------------------------------------------

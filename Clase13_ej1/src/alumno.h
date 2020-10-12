@@ -1,3 +1,5 @@
+#include "carrera.h"
+
 #ifndef ALUMNO_H_
 #define ALUMNO_H_
 
@@ -50,7 +52,7 @@ void printAlumno(eAlumno alumno, eCarrera *arrayCarrera, int len);
  * param array Array de estructuras
  * param len Tamaño del array
  */
-void printAlumnos(eAlumno *arrayAlumno, int lenAle, eCarrera *arrayCarrera,
+void printAlumnos(eAlumno *arrayAlumno, int lenAlu, eCarrera *arrayCarrera,
 		int lenCar);
 
 /*
@@ -63,4 +65,3 @@ void printAlumnos(eAlumno *arrayAlumno, int lenAle, eCarrera *arrayCarrera,
  * param criterio Ordena con criterio promedio (1) o apellido (-1)
  */
 void sortAlumnos(eAlumno *arrayAlumno, int lenAlu, int orden, int criterio);
-

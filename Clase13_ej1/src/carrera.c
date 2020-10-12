@@ -69,3 +69,35 @@ int cargarDescripcionCarrera(int idCarrera, eCarrera *array, int len,
 	}
 	return retorno;
 }
+//---------------------------------------------------------------------------------------------------------------------------------------
+int cargarIdCarrera(char *descripcion, eCarrera *array, int len, int *idCarrera) {
+	int retorno = -1;
+	int i;
+
+	if (array != NULL && len > 0 && descripcion != NULL) {
+		for (i = 0; i < len; i++) {
+			if (strcmp(array[i].descripcion, descripcion) == 0) {
+				*idCarrera = array[i].idCarrera;
+				retorno = 0;
+				break;
+			}
+		}
+	}
+
+	return retorno;
+}
+//---------------------------------------------------------------------------------------------------------------------------------------
+eCarrera buscarCarreraPorId(eCarrera *array, int len, int idCarrera) {
+	int i;
+	eCarrera retorno;
+
+	if (array != NULL && len > 0) {
+		for (i = 0; i < len; i++) {
+			if (array[i].idCarrera == idCarrera) {
+				retorno = array[i];
+			}
+		}
+	}
+
+	return retorno;
+}

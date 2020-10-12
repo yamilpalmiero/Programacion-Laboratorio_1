@@ -36,8 +36,8 @@ int utn_getFlotante(float *pResultado, char *mensaje, char *mensajeError,
  * param Valor maximo posible
  * param Cantidad de intentos para ingresar el dato correctamente
  */
-int utn_getCadena(char *pResultado, char *mensaje, char *mensajeError,
-		float minimo, float maximo, int reintentos);
+int utn_getCadena(char *pCadena, char *mensaje, char *mensajeError,
+		int minimo, int maximo, int reintentos);
 
 /*
  * brief Lee una cadena por teclado hasta que encuentra un '\n' o hasta que llega a longitud - 1

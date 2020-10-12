@@ -55,8 +55,8 @@ int utn_getFlotante(float *pResultado, char *mensaje, char *mensajeError,
 	return retorno;
 }
 //------------------------------------------------------------------------------------------------------------------------
-int utn_getCadena(char *pResultado, char *mensaje, char *mensajeError,
-		float minimo, float maximo, int reintentos) {
+int utn_getCadena(char *pCadena, char *mensaje, char *mensajeError, int minimo,
+		int maximo, int reintentos) {
 
 	int retorno = -1;
 	char bufferCadena[101];
@@ -67,8 +67,8 @@ int utn_getCadena(char *pResultado, char *mensaje, char *mensajeError,
 		fflush(stdin);
 		gets(bufferCadena);
 
-		if (strlen(bufferCadena) >= minimo && strlen(bufferCadena) < maximo) {
-			strcpy(pResultado, bufferCadena); //pResultado no hace falta ponerle el * porque como es cadena ya es puntero
+		if (strlen(bufferCadena) >= minimo && strlen(bufferCadena) < maximo) { //No puede ser <= maximo por el '\0'
+			strcpy(pCadena, bufferCadena); //pResultado no hace falta ponerle el * porque como es cadena ya es puntero
 			retorno = 0;
 			break;
 		}
@@ -164,13 +164,18 @@ int menu() {
 
 	system("cls");
 
-	printf("\n\nSeleccione una opcion:\n\n");
-	printf("1- Alta empleado.\n");
-	printf("2- Modificar empleado.\n");
-	printf("3- Baja empleado.\n");
-	printf("4- Informar.\n");
-	printf("5- Salir.\n\n");
-	scanf("%d", &opcion);
+	printf("\n\n***MENU PRINCIPAL***\n\n");
+	printf("1- Alta.\n");
+	printf("2- Modificar.\n");
+	printf("3- Baja.\n");
+	printf("4- Listar alumnos.\n");
+	printf("5- Listar alumnos.\n");
+	printf("6- Ordenar por carrera.\n\n");
+	printf("7- Ordenar por promedio.\n\n");
+	printf("9- Salir.\n\n");
+
+	utn_getEntero(&opcion, "Ingrese una opcion: ",
+			"Error, debe ingresar un numero entre 1 y 9", 1, 9, 2);
 
 	return opcion;
 }
@@ -180,12 +185,17 @@ int submenuInformes() {
 
 	system("cls");
 
-	printf("\n\nSeleccioone una opcion:\n\n");
-	printf("1- Listar por apellido y sector.\n");
-	printf(
-			"2- Total y promedio de salarios, y cuantos empleados superan el salario promedio.\n");
-	printf("3- Salir.\n\n");
-	scanf("%d", &opcion);
+	printf("\n\n***MENU INFORMES***\n\n");
+	printf("1- Listar alumnos de una sola carrera.\n");
+	printf("2- Listar alumnos por promedio.\n");
+	printf("3- Listar alumnos para cada carrera.\n");
+	printf("4- Cantidad de alumnos para cada carrera.\n");
+	printf("5- Cantidad de alumnos para una carrera.\n");
+	printf("6- Carrera con mayor cantidad de alumnos.\n");
+	printf("7- Salir.\n\n");
+
+	utn_getEntero(&opcion, "Ingrese una opcion: ",
+			"Error, debe ingresar un numero entre 1 y 7", 1, 7, 2);
 
 	return opcion;
 }
