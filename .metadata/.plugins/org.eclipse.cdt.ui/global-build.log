@@ -1,4 +1,4 @@
-20:39:23 **** Incremental Build of configuration Debug for project Clase17_ej3 ****
+22:22:08 **** Rebuild of configuration Debug for project Clase17_ej4 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase17_ej3.o" "..\\src\\Clase17_ej3.c" 
-gcc -o Clase17_ej3.exe "src\\Clase17_ej3.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase17_ej4.o" "..\\src\\Clase17_ej4.c" 
+gcc -o Clase17_ej4.exe "src\\Clase17_ej4.o" 
