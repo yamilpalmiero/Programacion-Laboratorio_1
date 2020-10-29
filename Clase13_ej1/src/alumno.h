@@ -65,3 +65,30 @@ void printAlumnos(eAlumno *arrayAlumno, int lenAlu, eCarrera *arrayCarrera,
  * param criterio Ordena con criterio promedio (1) o apellido (-1)
  */
 void sortAlumnos(eAlumno *arrayAlumno, int lenAlu, int orden, int criterio);
+
+/*
+ *
+ *
+ */
+int addAlumno(eAlumno *arrayAlumnos, int lenAlu, eCarrera *arrayCarreras,
+		int lenCar, int *contadorLegajo);
+
+/*
+ *
+ *
+ *
+ */
+int calcularPromedioTotal(eAlumno *array, int len, float *pResultado);
+
+/*
+ *
+ *
+ */
+int arrayVacio(eAlumno *array, int len);
+
+/*
+ *
+ *
+ *
+ */
+int buscarLibre(eAlumno *array, int len, int *posicion);

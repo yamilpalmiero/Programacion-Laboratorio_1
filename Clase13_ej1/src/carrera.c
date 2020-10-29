@@ -79,7 +79,7 @@ int cargarIdCarrera(char *descripcion, eCarrera *array, int len, int *idCarrera)
 			if (strcmp(array[i].descripcion, descripcion) == 0) {
 				*idCarrera = array[i].idCarrera;
 				retorno = 0;
-				break;
+				break;//Breakeo para que no siga corriendo el for porque ya encontre el id
 			}
 		}
 	}

@@ -6,6 +6,8 @@
 #include "alumno.h"
 #include "carrera.h"
 
+#define TAM 51
+
 //---------------------------------------------------------------------------------------------------------------------------------------
 int initAlumnos(eAlumno *array, int len) {
 	int retorno = -1;
@@ -20,7 +22,7 @@ int initAlumnos(eAlumno *array, int len) {
 	return retorno;
 }
 //---------------------------------------------------------------------------------------------------------------------------------------
-int hardcodearAlumnos(eAlumno *array, int len, int cantidad) {
+	int hardcodearAlumnos(eAlumno *array, int len, int cantidad) {
 	int contador = 0;
 	int i;
 
@@ -115,5 +117,107 @@ void sortAlumnos(eAlumno *arrayAlumno, int lenAlu, int orden, int criterio) {
 		}
 	}
 	printf("\nAlumnos ordenados.");
+}
+//---------------------------------------------------------------------------------------------------------------------------------------
+int addAlumno(eAlumno *arrayAlumnos, int lenAlu, eCarrera *arrayCarreras,
+		int lenCar, int *contadorLegajo) {
+	int retorno = -1;
+	int posicion;
+
+	if (arrayAlumnos != NULL && lenAlu > 0 && contadorLegajo != NULL) {
+		if (buscarLibre(arrayAlumnos, lenAlu, &posicion) == -1) {
+			printf("\nNo hay lugares vacios.");
+		} else {
+			(*contadorLegajo)++;
+			arrayAlumnos[posicion].legajo = *contadorLegajo; //Legajo coincide con el indice y es autoincremental
+			utn_getCadena(arrayAlumnos[posicion].nombre, "\nIngrese nombre: ",
+					"\nError.", 1, TAM, 2);
+			printf("\nIngrese sexo f/m: ");
+			fflush(stdin);
+			scanf("%c", &arrayAlumnos[posicion].sexo);
+			utn_getEntero(&arrayAlumnos[posicion].nota1,
+					"\nIngrese nota 1er parcial: ", "\nError.", 1, 10, 2);
+			utn_getEntero(&arrayAlumnos[posicion].nota2,
+					"\nIngrese nota 2do parcial: ", "\nError.", 1, 10, 2);
+			arrayAlumnos[posicion].promedio =
+					((float) arrayAlumnos[posicion].nota1
+							+ arrayAlumnos[posicion].nota2) / 2;
+			printf("\nFecha de ingreso: ");
+			scanf("%d/%d/%d", arrayAlumnos[posicion].fechaIngreso.dia,
+					arrayAlumnos[posicion].fechaIngreso.mes,
+					arrayAlumnos[posicion].fechaIngreso.anio);
+			printCarreras(arrayCarreras, lenCar);
+			utn_getEntero(&arrayAlumnos[posicion].idCarrera,
+					"\nIngrese Id de carrera: ", "\nError.", 1000, 1003, 2);
+			arrayAlumnos[posicion].isEmpty = 0;
+			printf(
+					"\nPosicion: %d\nLegajo: %d\nNombre: %s\nEdad: %d\nSexo: %c\nNota 1: %d\nNota 2: %d\nPromedio: %.2f\nFecha de ingreso: %d/%d/%d\nId carrera",
+					posicion, arrayAlumnos[posicion].legajo,
+					arrayAlumnos[posicion].nombre, arrayAlumnos[posicion].edad,
+					arrayAlumnos[posicion].sexo, arrayAlumnos[posicion].nota1,
+					arrayAlumnos[posicion].nota2,
+					arrayAlumnos[posicion].promedio,
+					arrayAlumnos[posicion].fechaIngreso.dia,
+					arrayAlumnos[posicion].fechaIngreso.mes,
+					arrayAlumnos[posicion].fechaIngreso.anio,
+					arrayAlumnos[posicion].idCarrera);
+			retorno = 0;
+		}
+	}
+	return retorno;
+}
+//---------------------------------------------------------------------------------------------------------------------------------------
+int calcularPromedioTotal(eAlumno *array, int len, float *pResultado) {
+	int retorno = -1;
+	int i;
+	int suma1 = 0;
+	int suma2 = 0;
+	int contador = 0;
+
+	if (array != NULL && len > 0) {
+		for (i = 0; i < len; i++) {
+			if (array[i].isEmpty == 0) {
+				suma1 = suma1 + array[i].nota1;
+				suma2 = suma2 + array[i].nota2;
+				contador++;
+				break;
+			}
+		}
+		*pResultado = (float) (suma1 + suma2) / contador;
+	}
+
+	return retorno;
+}
+//---------------------------------------------------------------------------------------------------------------------------------------
+int arrayVacio(eAlumno *array, int len) {
+	int retorno = 1;
+	int i;
+
+	if (array != NULL && len >= 0) {
+		for (i = 0; i < len; i++) {
+			if (array[i].isEmpty == 0) {
+				retorno = 0;
+				break;
+			}
+		}
+	}
+	return retorno;
+}
+//---------------------------------------------------------------------------------------------------------------------------------------
+int buscarLibre(eAlumno *array, int len, int *posicion) {
+	int retorno = -1;
+	int i;
+
+	if (array != NULL && len > 0) {
+		for (i = 0; i < len; i++) {
+			if (array[i].isEmpty == 1) {
+				*posicion = i;
+				retorno = 0;
+				break;
+			}
+		}
+	}
+
+	return retorno;
 }
 //---------------------------------------------------------------------------------------------------------------------------------------
