@@ -1,8 +1,4 @@
-20:29:33 **** Rebuild of configuration Debug for project Clase18_ej3 ****
+21:08:36 **** Rebuild of configuration Debug for project Clase18_ej4 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase18_ej3.o" "..\\src\\Clase18_ej3.c" 
-..\src\Clase18_ej3.c: In function 'main':
-..\src\Clase18_ej3.c:18:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
-   18 |  int retorno;
-      |      ^~~~~~~
-gcc -o Clase18_ej3.exe "src\\Clase18_ej3.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase18_ej4.o" "..\\src\\Clase18_ej4.c" 
+gcc -o Clase18_ej4.exe "src\\Clase18_ej4.o" 
