@@ -1,4 +1,5 @@
-20:16:49 **** Rebuild of configuration Debug for project Clase18_ej5 ****
+11:10:15 **** Rebuild of configuration Debug for project Clase19_ej1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase18_ej5.o" "..\\src\\Clase18_ej5.c" 
-gcc -o Clase18_ej5.exe "src\\Clase18_ej5.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase19_ej1.o" "..\\src\\Clase19_ej1.c" 
+gcc -o Clase19_ej1.exe "src\\Clase19_ej1.o" 
+Info: Nothing to build for Clase19_ej1
